@@ -1,0 +1,16 @@
+---
+
+- name: installing postgress sql
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Ensure postgress at latest version
+    ansible.builtin.apt:
+      name: postgresql
+      state: latest
+  
+  - name: Ensure postgresql started
+    ansible.builtin.apt:
+      name: postgresql
+      state: present

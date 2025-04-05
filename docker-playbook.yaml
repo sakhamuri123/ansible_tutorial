@@ -1,0 +1,8 @@
+---
+
+  - name : installing docker for all the hosts
+    hosts: all
+    become: true
+    roles:
+     - bsmeding.docker
+
